@@ -52,35 +52,49 @@ h1 {
   cursor: url('/public/lightsaber-image.png'), auto;
 }
 
-/* Star animation */
+/* Star animation - Moves from left to right and twinkles */
 @keyframes moveStars {
   0% {
-    transform: translateY(0) translateX(0);
+    transform: translateX(0vw);
+    opacity: 0; /* Start invisible */
+  }
+  25% {
+    opacity: 1; /* Fade in */
+  }
+  50% {
+    transform: translateX(50vw);
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1; /* Fade in again */
   }
   100% {
-    transform: translateY(-100vh) translateX(100vw);
+    transform: translateX(100vw); /* Move across the screen */
+    opacity: 0; /* Fade out before restarting */
   }
 }
 
 /* Create stars */
 .stars {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: 0;
 }
 
 .star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: white;
-  border-radius: 50%;
-  animation: moveStars 10s linear infinite;
+position: absolute;
+width: 2px;
+height: 2px;
+background-color: white;
+border-radius: 50%;
+animation: moveStars 5s linear infinite;
 }
+
+
 
 /* Cursor trail effect */
 @keyframes fadeOut {

@@ -54,6 +54,7 @@ function Photos() {
           and back. happy birthday my love &lt;3!
         </p>
       </div>
+      <button className="photos-button" onClick={() => window.location.href = '/gifts'}>click here for prezzies</button>
     </div>
   );
 }

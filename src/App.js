@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Intro from './Intro';
 import Puzzle from './Puzzle';
-import './App.css';
 import Photos from './Photos';
-
+import Gifts from './Gifts';
+import Stars from './Stars'; // ✅ Import the Stars component
+import './App.css';
 
 function App() {
   return (
-    <div className="app-container"> {/* ✅ Ensure everything is inside a wrapper */}
+    <div className="app-container">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Intro" element={<Intro />} />
         <Route path="/Puzzle" element={<Puzzle />} />
         <Route path="/Photos" element={<Photos />} />
+        <Route path="/Gifts" element={<Gifts />} />
       </Routes>
     </div>
   );
 }
-
 
 function Home() {
   const [audioInitialized, setAudioInitialized] = useState(false);
@@ -81,19 +82,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="stars">
-        {Array.from({ length: 100 }).map((_, i) => (
-          <div
-            key={i}
-            className="star"
-            style={{
-              top: `${Math.random() * 100}vh`,
-              left: `${Math.random() * 100}vw`,
-              animationDelay: `${Math.random() * 10}s`,
-            }}
-          ></div>
-        ))}
-      </div>
+      {/* ✅ Import Stars component here */}
+      <Stars />
 
       <h1>choose your year</h1>
 

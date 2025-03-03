@@ -1,0 +1,60 @@
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 90px;
+    background-color: black;
+  }
+  
+  /* Styling for the gift box */
+  .gift-box {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .gift-box:hover {
+    cursor: url('/public/red-lightsaber.png'), auto;
+    transform: scale(1.1);
+  }
+  
+  /* Styling for images */
+  .gift-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Effect when the box opens */
+  .opened {
+    animation: openEffect 0.5s ease forwards;
+  }
+  
+  /* Fade-in effect for the revealed content */
+  .gift-content {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  @keyframes openEffect {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

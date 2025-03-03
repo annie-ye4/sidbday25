@@ -1,0 +1,43 @@
+@keyframes moveStars {
+    0% {
+      transform: translateX(-10vw); /* Start slightly off-screen */
+      opacity: 0; /* Start invisible */
+    }
+    25% {
+      opacity: 1; /* Fade in */
+    }
+    50% {
+      transform: translateX(50vw);
+      opacity: 0.8;
+    }
+    75% {
+      opacity: 1; /* Fade in again */
+    }
+    100% {
+      transform: translateX(110vw); /* Move fully off-screen */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Star container */
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* Individual star */
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    animation: moveStars 5s linear infinite; /* Adjust timing for smooth movement */
+  }
+  
