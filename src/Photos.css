@@ -1,0 +1,114 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Allows scrolling beyond initial height */
+    overflow-x: hidden;
+}
+
+.home-container {
+    position: relative;
+    width: 100%;
+    min-height: 950vh; /* Ensure it grows */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+  /* Title Styling */
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    /* margin-bottom: 50px; */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 100; /* Increased so it stays on top */
+}
+
+  
+  /* Photo Section */
+  .photos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 200px; /* More space to ensure full view */
+}
+
+  
+  /* Photo Container */
+  .photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px 0; /* More space between photos to prevent clipping */
+    flex-wrap: wrap;
+  }
+  
+  /* Alternating Layout */
+  .photo-container.left {
+    flex-direction: row;
+  }
+  
+  .photo-container.right {
+    flex-direction: row-reverse;
+  }
+  
+  .photo {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    border: 15px solid white; /* Add a white border */
+}
+
+  
+  /* Caption Styling */
+  .caption {
+    max-width: 300px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ddd;
+    text-align: center;
+    padding: 0 100px; 
+  }
+  
+  /* Star animations */
+  .stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .ending-letter{
+    font-size: 20px; 
+    max-width: 600px; 
+    margin-bottom: 300px; 
+  }

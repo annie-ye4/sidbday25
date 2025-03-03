@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Add the starry background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stars.png'); /* Use a starry texture */
+    background-size: cover;
+    z-index: -1; /* Place behind other content */
+}
+
+.star-wars-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: url('/public/holding-cursor.png'), auto;
+}
+
+.title-text {
+    margin-bottom: 150px; 
+}
+
+@font-face {
+    font-family: 'trade-gothic'; /* Font name */
+    src: url('fonts/Trade\ Gothic\ LT.ttf') format('truetype'); /* Path to .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'trade-gothic-bold'; /* Font name */
+    src: url('fonts/Trade-Gothic-Bold-Font.otf') format('truetype'); /* Path to .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blue-words {
+    font-family: 'trade-gothic';
+    font-size: 4rem;
+    color: #5ba6d3;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.star-wars-logo {
+    animation: logoAnimation 5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 80%; /* Increase the width to make the logo larger */
+    max-width: 800px; /* Set a maximum width to avoid logo from becoming too large */
+    animation: shrink 5s ease-in-out forwards;
+}
+
+.scrolling-text {
+    position: absolute;
+    top: 100%; /* Start from below the viewport */
+    width: 100%;
+    height: auto; /* Adjust height to fit text dynamically */
+    perspective: 500px;
+    animation: scrollText 30s linear forwards; /* Adjusted animation */
+}
+
+.scrolling-content {
+    font-family: 'trade-gothic-bold';
+    font-size: 2rem;
+    line-height: 3rem; /* Adjusted spacing */
+    text-align: center;
+    color: #ba8f32;
+    transform: rotateX(20deg) translateZ(0); /* Adjusted angle */
+    animation: fadeIn 2s ease-in-out;
+    max-width: 80%; /* Restrict width */
+    margin: 0 auto; /* Center content */
+}
+
+/* Animations */
+@keyframes scrollText {
+    0% {
+        top: 100%; /* Start completely below the screen */
+    }
+    100% {
+        top: -200%; /* Scroll fully off the top */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scrolling-content {
+        font-size: 1.5rem; /* Smaller font for smaller screens */
+        line-height: 2rem;
+    }
+}
+

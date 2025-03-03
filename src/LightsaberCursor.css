@@ -1,0 +1,16 @@
+#lightsaber {
+    position: absolute;
+    width: 100px; /* Adjust to the width of your lightsaber image */
+    height: 400px; /* Adjust to the height of your lightsaber image */
+    background: url('/public/indigo-lightsaber.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1000;
+    transform-origin: bottom center;
+    transition: transform 0.1s linear, clip-path 0.5s ease-out;
+    clip-path: inset(77% 0 0 0); /* Initially covers the top half of the lightsaber */
+}
+
+#lightsaber.uncover {
+    clip-path: inset(0 0 0 0); /* Fully reveals the lightsaber */
+}

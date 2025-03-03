@@ -1,0 +1,158 @@
+/* Apply a night sky background with stars */
+body {
+  background-color: #000;
+  overflow: hidden;
+  margin: 0;
+  cursor: url('/public/lightsaber-image.png'), auto;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #2a6aaf;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-left: 10px; 
+  margin-right: 10px; 
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  cursor: url('/public/red-lightsaber.png'), auto;
+}
+
+.home-container {
+  cursor: url('/public/lightsaber-image.png'), auto;
+}
+
+/* Star animation */
+@keyframes moveStars {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+  }
+}
+
+/* Create stars */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: moveStars 10s linear infinite;
+}
+
+/* Cursor trail effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #4413d6; /* Bright purple */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-25%, -25%);
+  animation: fadeOut 1s linear forwards; /* Increase duration to 1s */
+}
+
+/* Image in the top-left corner */
+.image-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.audio-init-image {
+  width: 50px; /* Adjust size of the image */
+  height: 50px; /* Adjust size of the image */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.audio-init-image:hover {
+  transform: scale(1.1); /* Make the image slightly larger on hover */
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 8px;
+  left: 80px; /* Adjust this based on your layout */
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 200px; /* Optional, limits bubble size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-text {
+  color: black; 
+  white-space: nowrap; /* Ensures the text stays in a single line */
+  transform: rotate(0deg); /* Ensure text is horizontal */
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  transform: translateY(-50%);
+}
