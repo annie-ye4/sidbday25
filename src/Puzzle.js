@@ -54,7 +54,7 @@ const Puzzle = () => {
       }
     }
     if (isCorrect) {
-      navigate('/intro');
+      navigate('/Intro');
     } else {
       alert('wrong!!!');
     }

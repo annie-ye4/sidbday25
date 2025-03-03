@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Intro.css';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import LightsaberCursor from './LightsaberCursor'; // Import the cursor component
 
 const StarWarsIntro = () => {
@@ -38,7 +39,7 @@ const StarWarsIntro = () => {
     useEffect(() => {
         if (showScroll) {
             const timer = setTimeout(() => {
-                navigate('/puzzle'); // Redirect to another page
+                navigate('/Photos'); // Redirect to another page
             }, 20000); // Adjust the time according to the length of your scrolling text
 
             return () => clearTimeout(timer); // Cleanup the timer

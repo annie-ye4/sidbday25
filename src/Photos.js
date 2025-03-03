@@ -17,7 +17,7 @@ const images = [
 
 function Photos() {
   return (
-    <div className="home-container">
+    <div className="photos-home-container">
       {/* Starry Background */}
       <div className="stars">
         {Array.from({ length: 100 }).map((_, i) => (
