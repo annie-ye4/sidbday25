@@ -1,18 +1,18 @@
 import './Photos.css';
 
 const images = [
-  { src: 'pic1.jpg', caption: 'starting off strong with cute bunny pic – cant tell which one i want more hehe and this photo reminds me of the fact that you ARE a softie' },
-  { src: 'pic2.jpg', caption: 'another softie pic with the doggy from our favorite class that admittedly liked you more... also a reminder that we will have a dog one day' },
-  { src: 'pic3.jpg', caption: 'no words. just too handsome. sparkly eyes. beautiful smile. and a little stigmatism from my camera' },
-  { src: 'pic4.jpg', caption: 'the favorite place that we\'ve been to together! i think about it from time to time and miss how we were in our own world for a bit' },
+  { src: 'pic1.png', caption: 'starting off strong with cute bunny pic – cant tell which one i want more hehe and this photo reminds me of the fact that you ARE a softie' },
+  { src: 'pic2.png', caption: 'another softie pic with the doggy from our favorite class that admittedly liked you more... also a reminder that we will have a dog one day' },
+  { src: 'pic3.png', caption: 'no words. just too handsome. sparkly eyes. beautiful smile. and a little stigmatism from my camera' },
+  { src: 'pic4.png', caption: 'the favorite place that we\'ve been to together! i think about it from time to time and miss how we were in our own world for a bit' },
   { src: 'pic5.png', caption: 'you had way too much fun breaking these icicles but such a fun hike!' },
-  { src: 'pic6.jpg', caption: 'this pic is cute but goofy bc of the clown shoes and the dude hunched over in the back' },
-  { src: 'pic7.jpg', caption: 'who bought you that shirttttt' },
-  { src: 'pic8.jpg', caption: 'softie is painting clouds <3 you look so petite' },
-  { src: 'pic9.jpg', caption: 'pretty boy in a field of pretty flowers :)' },
-  { src: 'pic10.jpg', caption: 'MY LEMON PEEEEEEL' },
-  { src: 'pic11.jpg', caption: 'this is the type of pic you show to your kids' },
-  { src: 'pic12.jpg', caption: 'ending off with a picture that you hate but a picture that i love because it shows the way you look at me and care about me' }
+  { src: 'pic6.png', caption: 'this pic is cute but goofy bc of the clown shoes and the dude hunched over in the back' },
+  { src: 'pic7.png', caption: 'who bought you that shirttttt' },
+  { src: 'pic8.png', caption: 'softie is painting clouds <3 you look so petite' },
+  { src: 'pic9.png', caption: 'pretty boy in a field of pretty flowers :)' },
+  { src: 'pic10.png', caption: 'MY LEMON PEEEEEEL' },
+  { src: 'pic11.png', caption: 'this is the type of pic you show to your kids' },
+  { src: 'pic12.png', caption: 'ending off with a picture that you hate but a picture that i love because it shows the way you look at me and care about me' }
 ];
 
 function Photos() {
